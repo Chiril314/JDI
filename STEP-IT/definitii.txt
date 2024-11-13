@@ -1,0 +1,20 @@
+Tag - elemente cu ajutorul carora apare content pe site , fiecare tag are comportamentul sau specific
+p - paragraf, ce se foloseste pentru insertarea textului pe site. E un element de tip block
+span - tag-ul ce se foloseste pentru insertarea textului pe site. E un element de tip inline
+ul - lista neodornata
+ol - lista ordonata care are atribuit specific "type" si poate modifica aspectul listei
+dl - lista de descriere, se foloseste cel mai des pentru a reprezenta o lista de informatiitehnice
+dt - topicul listei de descriere
+dd - valoarea de descriere pentru topic
+li - elementul listei
+h1 ... h6 - articol care are scop sa atraga atentia utilizatorului la un topic. Cu cat mai mare cifra, cu atat mai mic textul
+
+Inline vs Block:
+    Inline - tag-urile de tipul dat ocupa atat spatiu cat content au inauntru
+    Block - tag-urile de tipul dat ocupa mai mult spatiu pe site decat contentul pe care il au inauntru
+
+Daca un tag are inauntru un alt tag se creeaza relatia parinte-copil
+
+Exista taguri care nu au nevoie de parte de inchidere:
+    hr - linie orizontala
+    br - impune trecerea din rand nou
