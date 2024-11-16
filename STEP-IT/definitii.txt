@@ -1,20 +1,31 @@
-Tag - elemente cu ajutorul carora apare content pe site , fiecare tag are comportamentul sau specific
-p - paragraf, ce se foloseste pentru insertarea textului pe site. E un element de tip block
+Tag - elemente cu ajutorul carora apare content pe site, fiecare tag are comportamentul sau specific.
+p - paragraf, ce se foloseste pentru inseratrea textului pe site. E un element de tip block
 span - tag-ul ce se foloseste pentru insertarea textului pe site. E un element de tip inline
 ul - lista neodornata
-ol - lista ordonata care are atribuit specific "type" si poate modifica aspectul listei
-dl - lista de descriere, se foloseste cel mai des pentru a reprezenta o lista de informatiitehnice
+ol - lista ordonata care are atribut specific "type" si poate modifica aspectul listei
+dl - lista de descriere, se foloseste cel mai des pentru a reprezenta o lista de informatii tehnice
 dt - topicul listei de descriere
 dd - valoarea de descriere pentru topic
 li - elementul listei
-h1 ... h6 - articol care are scop sa atraga atentia utilizatorului la un topic. Cu cat mai mare cifra, cu atat mai mic textul
+h1 ... h6 - articol care are scop scop sa atraga atentia utilizatorului la un topic. Cu cat mai mare cifra, cu atat mai mic textul
+img - imagine care accepta 2 atribute, src cu sursa imaginii, alt cu textul care o sa apara daca imaginea nu se incarca
 
 Inline vs Block:
     Inline - tag-urile de tipul dat ocupa atat spatiu cat content au inauntru
     Block - tag-urile de tipul dat ocupa mai mult spatiu pe site decat contentul pe care il au inauntru
-
-Daca un tag are inauntru un alt tag se creeaza relatia parinte-copil
+        
+Daca un tag are inauntru un alt tag se creaza relatia parinte-copil
 
 Exista taguri care nu au nevoie de parte de inchidere:
     hr - linie orizontala
     br - impune trecerea din rand nou
+
+Fiecare text din html poate sa primeasca 2 atribute globale:
+    1)class - un nume care se ofera elementelor pentru a putea fi identificate, numele dat se poate repeta pe site
+
+CSS - Cascading Style Sheet reprezinta un limbaj de stilizare care poate fi integrat prin 3 metode:
+    1)prin tag-ul <style></style>
+    2)prin inline stilistica
+    3)prin fisier aparte conectat prin tag-ul <link>
+
+    
