@@ -1,0 +1,43 @@
+body{
+    background: white;
+}
+.container{
+    width: 1250px;
+    height: 1000px;
+    margin: auto;
+}
+h1{
+    color: #3A6D8C;
+    background: #EAD8B1;
+    text-align: center;
+    font-family: Inconsolata, monospace;
+    font-weight: 300;
+}
+.h{
+    margin-top: 0px;
+}
+.head{
+    margin-bottom: 0px;
+}
+.container__pizza{
+    width: 550px;
+    padding: 15px;
+    border: solid 5px #EAD8B1;
+    text-align: center;
+    display:inline-block;
+    margin-bottom: 35px;
+}
+.pizza{
+    width: 550px;
+    height: 400px;
+}
+.pizza__parent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.pizza__name{
+    font-size: 18px;
+    font-family: Inconsolata, monospace;
+    margin-bottom: 0px;
+}

@@ -1,0 +1,56 @@
+.box{
+    width: 100px;
+    height: 100px;
+}
+.parent{
+    display: flex;
+    background: black;
+    width: 1000px;
+    height: 500px;
+    padding: 10px;
+    margin: 100px auto;
+}
+.first{
+    order: 2;
+    background-color: red;
+    flex-shrink: 1;
+    align-self: center;
+}
+.second{
+    order: 7;
+    background-color: blue;
+    flex-grow: 1;
+}
+.third{
+    order: 12;
+    background-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+flexbox - model modern de amplasare a elementelor in pagina conform a doua axe:
+1) Principala - orizontala
+2) Secundara - verticala
+
+odata cum unui parinte i se indica display:flex el devine flex container care poate folosi adaugator proprietati noi. 
+gap - indica spatiul dintre elemente
+justify-content - alinieaza elementele pe axa principala dupa anumite valori
+align-items - alinieaza elementele pe axa secundara dupa anumite valori
+flex-direction - schimba orientarea axelor si prioritetul lor
+flex-wrap - impune elementele care nu incap sa treaca din rand nou pastrand proprietatile lor
+align-content - alinieaza randuri de elemente atunci cand este folosit flex-wrap 
+
+flex-items properties:
+order - cu cat mai mare numarul de ordine cu atat mai la sfarsit de container e elementul
+flex-grow - cu cat mai mare valoarea, cu atat mai tare creste elementul in container
+flex-shrink - cu cat mai mare valoarea, cu atat mai tare se ingusteaza, lucreaza atunci cand copii din container-ul flex exagereaza cu marimea si trec peste marimile parintelui lui
+align-self - alinieaza singur elementul pe axa secundara
+*/

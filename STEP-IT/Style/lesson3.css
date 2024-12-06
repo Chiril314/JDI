@@ -3,36 +3,64 @@ body{
     background: white;
 }
 .container{
-    width: 1250px;
+    width: 1650px;
     margin: auto;
 }
 h1{
     color: #3A6D8C;
     background: #EAD8B1;
-    text-align: center;
     font-family: Inconsolata, monospace;
     font-weight: 300;
+    text-align: left;
 }
-.h{
-    margin-top: 0px;
-}
-.head{
-    margin-bottom: 0px;
-}
+
 .container__pizza{
-    width: 550px;
+    width: 750px;
     padding: 15px;
     border: solid 5px #EAD8B1;
     text-align: center;
     display:inline-block;
-    margin: 15.55555px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .pizza{
-    width: 550px;
-    height: 400px;
+    width: 400px;
+    height: 280px;
+}
+.pizza__parent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .pizza__name{
-    font-size: 18px;
+    text-align: center;
+    margin-top: 0px;
+}
+.ingrediente{
+    text-align:left;
+}
+.first{
+    width: 750px;
+}
+.parent{
+    display: flex;
+    color: #3A6D8C;
+    background: #EAD8B1;
     font-family: Inconsolata, monospace;
-    margin-bottom: 0px;
+    font-weight: 300;
+    margin-bottom: 35px;
+    width: 1650px;
+    height: 54px;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+}
+.nume{
+    flex-grow: 1;
+    margin-left: 25px;
+}
+.contacte{
+    margin-right: 25px;
 }
