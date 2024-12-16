@@ -1,0 +1,119 @@
+.keyboard{
+    background: rgb(17, 17, 17); 
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid crimson;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(90, 30px);
+    grid-template-rows: repeat(25, 30px);
+    grid-gap: 10px;
+    border-radius: 25px;
+}
+.key{
+    display: flex;
+    border: 3px solid lightgray;
+    border-radius: 5px;
+    font-size: 45px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    grid-column: span 4;
+    grid-row: span 4;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    box-shadow: 0px 0px 20px white;
+}
+.free{
+    border: 0px;
+    background-color: rgb(17, 17, 17);
+}
+.half{
+    border: 0px;
+    grid-column: span 2;
+    background-color: rgb(17, 17, 17);
+}
+.quarter{
+    border: 0px;
+    grid-column: span 1;
+    background-color: rgb(17, 17, 17);
+}
+.full{
+    border: 0px;
+    grid-column: span 17;
+    background-color: rgb(17, 17, 17);
+}
+.backspace{
+    grid-column: span 8;
+}
+.full__row{
+    grid-row: span 1;
+    grid-column: span 92;
+}
+.tab{
+    grid-column: span 6;
+}
+.bara{
+    grid-column: span 6;
+}
+.plus{
+    grid-row: span 8;
+}
+.caps{
+    grid-column: span 7;
+}
+.enter{
+    grid-column: span 9;
+}
+.space{
+    border: 0px;
+    grid-column: span 12;
+}
+.shift.left{
+    grid-column: span 9;
+}
+.shift.right{
+    grid-column: span 11;
+}
+.simple{
+    border: 0px;
+}
+.enter__corner{
+    grid-row: span 8;
+}
+.ctrl{
+    grid-column: span 5;
+}
+.wnds{
+    grid-column: span 5;
+}
+.alt{
+    grid-column: span 5;
+}
+.fn{
+    grid-column: span 5;
+}
+.spacebar{
+    grid-column: span 25;
+}
+.zero{
+    grid-column: span 8;
+}
+.key:hover{
+    box-shadow: 0px 0px 40px white;
+}
+.key.red:hover{
+    box-shadow: 0px 0px 40px rgb(255, 0, 51);
+}
+.none:hover{
+    box-shadow: 0px 0px 0px rgb(255, 0, 51);
+}
+.red{
+    background-color: #5a0003;
+    box-shadow: 0px 0px 20px rgb(255, 0, 51);
+}
+.none{
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0px 0px 0px rgb(255, 0, 51);
+}
