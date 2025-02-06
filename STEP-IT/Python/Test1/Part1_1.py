@@ -1,0 +1,1 @@
+print("\"Python\'s syntax is easy to learn,\" he said.\nHere is a tab:\t\tand\na new line.")

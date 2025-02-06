@@ -28,4 +28,4 @@ import random as r
 x = r.randint(1, 10)
 y = r.randrange(-10, 10, 2)
 A = m.fabs(m.pow(x, 2 + y) + y)
-print('x =', x, 'y =', y, 'A =', Asd)
+print('x =', x, 'y =', y, 'A =', A)

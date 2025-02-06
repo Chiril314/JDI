@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
     std::string executableName = "output_executable";
 
     // Step 1: Compile the file
-    std::string compileCommand = "g++ " + fileName + " -o " + executableName;
+    std::string compileCommand = "g++ -std=c++23 " + fileName + " -o " + executableName;
     int compileStatus = system(compileCommand.c_str());
 
     if (compileStatus != 0) {
@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
         std::cerr << "Execution failed." << std::endl;
         return 1;
     }
-    
+
     std::cout << std::endl;
 
     return 0;
