@@ -1,0 +1,32 @@
+[
+    {
+        "nume": "jora",
+        "prenume": "perete",
+        "telefon": "345678901",
+        "data_plata": {
+            "zi": 14,
+            "luna": 12,
+            "an": 2012
+        }
+    },
+    {
+        "nume": "anton",
+        "prenume": "beton",
+        "telefon": "234567890",
+        "data_plata": {
+            "zi": 13,
+            "luna": 12,
+            "an": 2012
+        }
+    },
+    {
+        "nume": "anton",
+        "prenume": "beton",
+        "telefon": "234567890",
+        "data_plata": {
+            "zi": 12,
+            "luna": 11,
+            "an": 2011
+        }
+    }
+]
