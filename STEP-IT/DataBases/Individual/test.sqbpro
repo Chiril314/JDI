@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/chirilplacinta/Downloads/JDI/STEP-IT/DataBases/Examen/test.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="2986"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="0" parent="2"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="view_a" custom_title="0" dock_id="1" table="4,6:mainview_a"/><dock_state state="000000ff00000000fd0000000100000002000005b20000033ffc0100000001fb000000160064006f0063006b00420072006f00770073006500310100000000000005b20000010b00ffffff000002940000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="disciplina" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="91"/><column index="2" value="72"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="examinare" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="95"/><column index="2" value="67"/><column index="3" value="92"/><column index="4" value="112"/><column index="5" value="105"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="facultate" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="86"/><column index="2" value="154"/><column index="3" value="69"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="grupa" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="66"/><column index="2" value="105"/><column index="3" value="44"/><column index="4" value="83"/><column index="5" value="44"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="lector" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="0" mode="0"/></sort><column_widths><column index="1" value="66"/><column index="2" value="70"/><column index="3" value="66"/><column index="4" value="130"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="note" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="3" mode="0"/></sort><column_widths><column index="1" value="57"/><column index="2" value="97"/><column index="3" value="80"/><column index="4" value="37"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="specialitate" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="104"/><column index="2" value="135"/><column index="3" value="69"/><column index="4" value="88"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="sqlite_sequence" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="44"/><column index="2" value="32"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="student" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort><column index="1" mode="0"/></sort><column_widths><column index="1" value="79"/><column index="2" value="68"/><column index="3" value="65"/><column index="4" value="66"/><column index="5" value="94"/><column index="6" value="94"/><column index="7" value="33"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="student_log" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="79"/><column index="2" value="94"/><column index="4" value="114"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="view_a" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="72"/><column index="2" value="46"/><column index="3" value="123"/><column index="4" value="137"/><column index="5" value="73"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">CREATE TABLE &quot;student_log&quot;(
+	&quot;log_id&quot; INTEGER PRIMARY KEY AUTOINCREMENT, 
+	&quot;actiune&quot; TEXT,
+	&quot;student_id&quot; INTEGER, 
+	&quot;grupa_id&quot; INTEGER NOT NULL,
+	&quot;nume&quot; VARCHAR(50) NOT NULL,
+	&quot;data_nasterii&quot; DATE NOT NULL, 
+	&quot;IDNP&quot; VARCHAR(12) NOT NULL, 
+	&quot;gen&quot; INTEGER NOT NULL
+);
+
+CREATE TRIGGER student_insert
+	AFTER INSERT ON student
+	FOR EACH ROW 
+BEGIN
+	INSERT INTO student_log(actiune, student_id, grupa_id, nume, data_nasterii, IDNP, gen)
+	VALUES(
+		&quot;INSERT&quot;,
+		NEW.student_id,
+		NEW.grupa_id, 
+		NEW.nume || ' ' || NEW.prenume, 
+		NEW.data_nasterii, 
+		NEW.IDNP,
+		NEW.gen);
+END;
+
+CREATE TRIGGER student_update
+	AFTER UPDATE OF grupa_id ON student
+	FOR EACH ROW
+BEGIN
+	INSERT INTO student_log(actiune, student_id, grupa_id, nume, data_nasterii, IDNP, gen)
+	VALUES(
+		&quot;UPDATE&quot;,
+		OLD.student_id,
+		OLD.grupa_id || &quot; -&gt; &quot; || NEW.grupa_id,
+		OLD.nume || ' ' || OLD.prenume,
+		OLD.data_nasterii,
+		OLD.IDNP,
+		OLD.gen);
+END;
+
+CREATE TRIGGER student_delete
+	AFTER DELETE ON student
+	FOR EACH ROW
+BEGIN
+	INSERT INTO student_log(actiune, student_id, grupa_id, nume, data_nasterii, IDNP, gen)
+	VALUES(
+		&quot;DELETE&quot;,
+		OLD.student_id,
+		OLD.grupa_id,
+		OLD.nume || ' ' || OLD.prenume,
+		OLD.data_nasterii,
+		OLD.IDNP,
+		OLD.gen);
+END;
+
+INSERT INTO student (student_id, grupa_id, nume, prenume, data_nasterii, IDNP, gen)
+VALUES(115, 7, &quot;chiril&quot;, &quot;placinta&quot;, &quot;17.09.2009&quot;, &quot;123456789123&quot;, 1)
+
+UPDATE student
+SET grupa_id = 10
+WHERE student_id = 115;
+
+DELETE FROM student
+WHERE student_id = 115;
+
+INSERT INTO student (student_id, grupa_id, nume, prenume, data_nasterii, IDNP, gen)
+VALUES(116, 9, &quot;aliona&quot;, &quot;placinta&quot;, &quot;07.08.1980&quot;, &quot;345210789037&quot;, 0)
+
+UPDATE student
+SET grupa_id = 1
+WHERE student_id = 116;
+
+DELETE FROM student
+WHERE student_id = 116;
+	</sql><current_tab id="0"/></tab_sql></sqlb_project>
