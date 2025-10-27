@@ -1,5 +1,5 @@
 #include <iostream>
-#include <iomanip>
+#include <algorithm>
 
 using namespace std;
 
@@ -8,11 +8,10 @@ int main(){
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    double a, b;
-    cin >> a >> b;
+    int b, g, n;
+    cin >> b >> g >> n;
 
-    double c = (b * b - a * a) / (2 * a);
-    cout << setprecision(13) << fixed << c;
+    cout << min(g, n) - n + min(b, n) + 1;
 
     return 0;
 }
