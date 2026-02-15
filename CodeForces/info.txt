@@ -1,0 +1,29 @@
+4 Players:
+    - Chiril:
+        - Elo: 1497
+        - Games Played: 21
+        - Games Won: 20
+        - Games Tied: 0
+        - Games Lost: 1
+        - Win Rate: 95.2381%
+    - Ioan:
+        - Elo: 992
+        - Games Played: 20
+        - Games Won: 2
+        - Games Tied: 5
+        - Games Lost: 13
+        - Win Rate: 10%
+    - Ion:
+        - Elo: 948
+        - Games Played: 3
+        - Games Won: 0
+        - Games Tied: 0
+        - Games Lost: 3
+        - Win Rate: 0%
+    - Aliona:
+        - Elo: 1200
+        - Games Played: 18
+        - Games Won: 4
+        - Games Tied: 5
+        - Games Lost: 9
+        - Win Rate: 22.2222%

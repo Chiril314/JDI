@@ -4,61 +4,47 @@
 using namespace std;
 
 int main(){
-    int n, m;
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    int n, m, cnt = 0;
     cin >> n >> m;
 
-    vector<int> scaune(m);
-    vector<bool> scaunOcupat(m, false);
-    int primMinistru;
-    int candidatRamas;
+    vector<int> s(m);
     for(int i = 0; i < m; i++)
-        cin >> scaune[i];
+        cin >> s[i];
 
-    vector<int> candidati(m + 1);
-    vector<bool> candidatAles(m + 1, false);
+    vector<int> a(m + 1);
     for(int i = 0; i < m + 1; i++)
-        cin >> candidati[i];
+        cin >> a[i];
 
-    while(true){
+    while(cnt < m){
         for(int i = 0; i < m + 1; i++){
-            if(candidatAles[i])
+            if(a[i] == -1)
                 continue;
             
             for(int j = 0; j < m; j++)
-                if(!scaunOcupat[j] && scaune[j] == candidati[i]){
-                    scaunOcupat[j] = true;
-                    candidatAles[i] = true;
-                    if(j == 0)
-                        primMinistru = i + 1;
-                }
-        }
-
-        int cnt = 0;
-        for(int i = 0; i < m + 1; i++)
-            if(candidatAles[i])
-                cnt++;
-
-        if(cnt == m){
-            for(int i = 0; i < m + 1; i++)
-                if(!candidatAles[i]){
-                    candidatRamas = i + 1;
-                    break;
-                }
-
-            break;
-        }
-        
-        for(int i = 0; i < m + 1; i++){
-            if(!candidatAles[i]){
-                if(candidati[i] == n)
-                    candidati[i] = 1;
-                else
-                    candidati[i]++;
-            }
+                if(s[j] != -1 && s[j] == a[i]){
+                        cnt++;
+                        if(j == 0)
+                            cout << i + 1 << ' ';
+                        s[j] = -1;
+                        a[i] = -1;
+                    }
+            
+            if(a[i] != -1) 
+                a[i]++;
+            if(a[i] > n)
+                a[i] = 1;
         }
     }
 
-    cout << primMinistru << ' ' << candidatRamas;
+    for(int i = 0; i < m + 1; i++)
+        if(a[i] != -1){
+            cout << i + 1;
+            break;
+        }
 
     return 0;
 }
