@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Agenda</title>
+  <link rel="stylesheet" href="l8.css" />
+</head>
+<body>
+  <div class="popup-overlay" id="welcomePopup">
+    <div class="popup">
+      <button class="popup-close" id="closePopup" aria-label="Închide popup">X</button>
+      <h2>Welcome!</h2>
+      <p>Welcome to the app My Agenda, keep your notes and plans here for free</p>
+    </div>
+  </div>
+
+  <header class="topbar">
+    <h1 class="logo">My Agenda</h1>
+    <div class="datetime" id="dateTime"></div>
+  </header>
+
+  <main class="container">
+    <section class="form-card">
+      <h2>Adaugă o notiță</h2>
+      <form id="noteForm">
+        <label for="noteTitle">Titlu</label>
+        <input
+          type="text"
+          id="noteTitle"
+          placeholder="Ex: Plan pentru mâine"
+          required
+        />
+
+        <label for="noteContent">Conținut</label>
+        <textarea
+          id="noteContent"
+          rows="5"
+          placeholder="Scrie aici notița ta..."
+          required
+        ></textarea>
+
+        <button type="submit" class="btn-primary">Generează notiță</button>
+      </form>
+    </section>
+
+    <section class="notes-section">
+      <div class="notes-header">
+        <h2>Notițele mele</h2>
+        <span id="notesCount">0 notițe</span>
+      </div>
+
+      <div class="notes-grid" id="notesList"></div>
+    </section>
+  </main>
+
+  <script src="l8.js"></script>
+</body>
+</html>

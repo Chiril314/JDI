@@ -1,0 +1,4 @@
+.selected {
+    background-color: green;
+    border: 1px solid darkgreen;
+}
