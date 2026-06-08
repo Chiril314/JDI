@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Știri Strapi</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #17202a;
+        background: #f4f7fb;
+      }
+
+      header {
+        background: #12355b;
+        color: white;
+        padding: 28px 24px;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+      }
+
+      .topline {
+        margin-top: 8px;
+        color: #cbd8e6;
+      }
+
+      .categories {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 12px;
+        margin: 22px 0;
+      }
+
+      .category {
+        border: 1px solid #d9e2ec;
+        border-radius: 8px;
+        padding: 14px;
+        background: white;
+      }
+
+      .category strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .posts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 16px;
+      }
+
+      article {
+        border: 1px solid #d9e2ec;
+        border-radius: 8px;
+        padding: 18px;
+        background: white;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+        color: #52616f;
+        font-size: 14px;
+      }
+
+      .badge {
+        border-radius: 999px;
+        padding: 4px 9px;
+        background: #e7f0fa;
+        color: #12355b;
+      }
+
+      .featured {
+        background: #fff2cc;
+        color: #745100;
+      }
+
+      p {
+        line-height: 1.5;
+      }
+
+      .translation {
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid #edf2f7;
+        color: #52616f;
+        font-size: 14px;
+      }
+
+      .error {
+        padding: 16px;
+        border: 1px solid #f5c2c7;
+        border-radius: 8px;
+        background: #f8d7da;
+        color: #842029;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Portal de știri</h1>
+      <div class="topline">Date încărcate din API-ul Strapi</div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Categorii</h2>
+        <div id="categories" class="categories">Se încarcă...</div>
+      </section>
+
+      <section>
+        <h2>Știri</h2>
+        <div id="posts" class="posts">Se încarcă...</div>
+      </section>
+    </main>
+
+    <script>
+      async function getJson(url) {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`${url} a răspuns cu ${response.status}`);
+        }
+        return response.json();
+      }
+
+      function renderCategories(categories) {
+        document.getElementById("categories").innerHTML = categories
+          .map(
+            (category) => `
+              <div class="category">
+                <strong>${category.name_ro}</strong>
+                <div>RU: ${category.name_ru}</div>
+                <div>EN: ${category.name_en}</div>
+                <div>${category.posts.length} știri</div>
+              </div>
+            `
+          )
+          .join("");
+      }
+
+      function renderPosts(posts) {
+        document.getElementById("posts").innerHTML = posts
+          .map(
+            (post) => `
+              <article>
+                <h3>${post.title_ro}</h3>
+                <div class="meta">
+                  <span class="badge">${post.category.name_ro}</span>
+                  <span>${post.published_date}</span>
+                  ${post.is_featured ? '<span class="badge featured">Featured</span>' : ""}
+                </div>
+                <p>${post.description_ro}</p>
+                <div class="translation">
+                  <strong>RU:</strong> ${post.title_ru}<br>
+                  <strong>EN:</strong> ${post.title_en}
+                </div>
+              </article>
+            `
+          )
+          .join("");
+      }
+
+      async function init() {
+        try {
+          const [categories, posts] = await Promise.all([
+            getJson("/api/categories?populate=posts"),
+            getJson("/api/posts?populate=category&pagination[pageSize]=100"),
+          ]);
+
+          renderCategories(categories.data);
+          renderPosts(posts.data);
+        } catch (error) {
+          document.querySelector("main").innerHTML = `<div class="error">${error.message}</div>`;
+        }
+      }
+
+      init();
+    </script>
+  </body>
+</html>

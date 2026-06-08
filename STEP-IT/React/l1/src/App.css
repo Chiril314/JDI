@@ -1,0 +1,25 @@
+body {
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  margin: 20px;
+}
+
+nav a {
+  margin: 10px;
+}
+
+input {
+  margin: 10px;
+}
+
+button {
+  margin: 5px;
+}
+
+select {
+  display: block;
+  margin: 10px auto;
+}

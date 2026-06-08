@@ -4,26 +4,50 @@
 
 using namespace std;
 
-int main(){
-    int n, s = 0, p;
-    cin >> n;
-
-    vector<int> a(n);
-    for(int i = 0; i < n; i++){
-        cin >> a[i];
-        s += a[i];
+bool canCover(vector<long long> &a, int k, long long r){
+    int n = a.size(), used = 0, i = 0;
+    while(i < n){
+        used++;
+        if(used > k)
+            return false;
+    
+        long long coverRight = a[i] + 2LL * r;
+        while(i < n && a[i] <= coverRight){
+            i++;
+        }
     }
 
-    p = s / 2;
-    vector<vector<int>> dp(n + 1, vector<int> (p + 1, 0));
-    for(int i = 1; i <= n; i++)
-        for(int j = 1; j <= p; j++)
-            if(j - a[i - 1] >= 0)
-                dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - a[i - 1]] + a[i - 1]);
-            else
-                dp[i][j] = dp[i - 1][j];
+    return true;
+}
 
-    cout << min(dp[n][p], s - dp[n][p]) << ' ' << max(dp[n][p], s - dp[n][p]);
+int main(){
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+
+    int n, k;
+    cin >> n >> k;
+
+    vector<long long> a(n);
+    for(int i = 0; i < n; i++)
+        cin >> a[i];
+
+    sort(a.begin(), a.end());
+
+    long long l = 0, r = a[n - 1] - a[0];
+    long long ans = r;
+
+    while(l <= r){
+        long long m = l + (r - l) / 2;
+        if(canCover(a, k, m)){
+            ans = m;
+            r = m - 1;
+        } else {
+            l = m + 1;
+        }
+    }
+
+    cout << ans;
 
     return 0;
 }

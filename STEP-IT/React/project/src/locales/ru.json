@@ -1,0 +1,128 @@
+{
+    "header": {
+        "contact": "Контакт",
+        "search": "Поиск",
+        "privateOffice": "Личный кабинет",
+        "language": "Язык",
+        "logoTitle": "Poșta Moldovei",
+        "logoSubtitle": "Национальный почтовый оператор"
+    },
+    "nav": {
+        "home": "Главная",
+        "trackTrace": "Отследить отправление",
+        "directMail": "Прямая реклама",
+        "socialPayments": "Социальные выплаты"
+    },
+    "home": {
+        "title": "Почтовые услуги для людей и бизнеса",
+        "subtitle": "Отслеживайте отправления, продвигайте бизнес и пользуйтесь платежными услугами через национальную почтовую сеть.",
+        "cards": {
+            "track": {
+                "title": "Отследить отправление",
+                "text": "Проверьте статус почтовых и курьерских отправлений."
+            },
+            "direct": {
+                "title": "Прямая реклама",
+                "text": "Отправляйте рекламные материалы напрямую клиентам."
+            },
+            "social": {
+                "title": "Социальные выплаты",
+                "text": "Информация о получении пенсий, пособий и других социальных выплат."
+            }
+        }
+    },
+    "track": {
+        "title": "Отследить отправление",
+        "subtitle": "Введите номер отслеживания, чтобы проверить статус отправления.",
+        "postalDelivery": "Почтовое отправление",
+        "courierDelivery": "Курьерское отправление",
+        "postalText": "Используйте эту форму, чтобы проверить статус почтового отправления.",
+        "courierText": "Используйте эту форму, чтобы проверить статус курьерского отправления.",
+        "placeholder": "Введите номер отслеживания",
+        "search": "Искать"
+    },
+    "directMail": {
+        "title": "Publicitate prin poștă",
+        "p1": "Dorești să expediezi scrisori, cataloage, broșuri și pliante clienților tăi? Serviciul Direct-Mail îți oferă această oportunitate!",
+        "p2": "Dacă optezi pentru o comunicare eficientă și nemijlocită cu beneficiarii, expediază-le pliante și fluturași promoționali.",
+        "p3": "Este un canal publicitar eficient, care va contribui substanțial la recunoașterea companiei tale și îți va influența pozitiv vânzările.",
+        "p4": "Tot de ce avem nevoie, este adresa clientului. Restul este asigurat de către Poșta Moldovei!",
+        "ratesButton": "Vezi tarifele pentru publicitatea prin poștă.",
+        "audience": {
+            "title": "Direct-Mail poate fi de interes pentru",
+            "items": [
+                "Rețele de magazine",
+                "Antreprenori privați",
+                "Agenții de publicitate",
+                "Companii de asigurări",
+                "Companii de telecomunicații",
+                "Bănci, edituri, fonduri, comerț în catalog"
+            ]
+        },
+        "benefits": {
+            "title": "Beneficii",
+            "items": [
+                "Tarif special și posibilitate de a economisi",
+                "Livrare directă a produselor către destinatari",
+                "Logistică simplificată",
+                "Controlul termenelor de livrare",
+                "Minim 1000 de articole per expeditor"
+            ]
+        }
+    },
+    "socialPayments": {
+        "title": "Plăți sociale",
+        "p1": "Beneficiarii de plăți sociale pot să-și ridice banii în toate oficiile poștale, fără a se ține cont de viza de reședință. Procesul de achitare se efectuează lunar, începând cu data de 1, și se stopează în ultimele 3 zile lucrătoare ale lunii în curs.",
+        "p2": "Indemnizațiile și pensiile pot fi ridicate și la domiciliu. Distribuirea la domiciliu are loc doar în favoarea persoanelor în vârstă și persoanelor cu dizabilități, care, din cauza stării de sănătate, nu se pot deplasa la oficiile poștale. Acest proces se efectuează în baza unei cereri completate în prealabil.",
+        "p3": "Plățile sociale se achită personal beneficiarului, mandatarului acestuia, tutorelui sau curatorului la prezentarea actelor confirmative. Achitările către mandatar se efectuează doar în cazul prezentării documentului care-i confirmă identitatea și a procurii autentificate, conform legislației în vigoare. Se consideră nulă procura în care nu este indicată data întocmirii.",
+        "terms": {
+            "title": "Termenii de valabilitate a procurii sunt:",
+            "items": [
+                "12 luni consecutive pentru ridicarea pensiei (în baza art. 34 al Legii nr. 156-XIV din 14 octombrie 1998 privind pensiile de asigurări sociale de stat);",
+                "12 luni pentru ridicarea alocației nominale pentru merite deosebite de stat și a compensației bănești lunare în schimbul asigurării cu produse alimentare și suplimente alimentare;",
+                "până la 3 ani pentru alte plăți sociale."
+            ]
+        },
+        "phone": "Telefon pentru informații: 022 251-299, 022 251-144."
+    },
+    "footer": {
+        "companyName": "ГП \"Почта Молдовы\"",
+        "supportLabel": "Поддержка:",
+        "phone": "тел.: +373 22 270 044",
+        "email": "informatii@posta.md",
+        "address": "бул. Штефан чел Маре ши Сфынт, 134, MD-2012, мун. Кишинэу, Молдова",
+        "aboutTitle": "О нас",
+        "publicTitle": "Общественная информация",
+        "supportTitle": "Поддержка клиента",
+        "aboutLinks": [
+            "Презентация",
+            "Достижения",
+            "Руководство",
+            "Организационная структура",
+            "Законодательство",
+            "Кадры",
+            "Партнёры"
+        ],
+        "publicLinks": [
+            "Test Test",
+            "Связь со СМИ",
+            "Новости",
+            "Отчёты",
+            "Тендеры",
+            "Аренда",
+            "Продажи",
+            "Контакты"
+        ],
+        "supportLinks": [
+            "Защита персональных данных",
+            "Обратная связь",
+            "Рекламации и жалобы",
+            "Cookies",
+            "Сроки и условия",
+            "Тарифы",
+            "Доступность в почтовых отделениях",
+            "Специализированная линия по борьбе с коррупцией",
+            "Карта сайта"
+        ]
+    }
+}

@@ -1,0 +1,128 @@
+{
+    "header": {
+        "contact": "Contact",
+        "search": "Search",
+        "privateOffice": "Private office",
+        "language": "Language",
+        "logoTitle": "Poșta Moldovei",
+        "logoSubtitle": "National postal operator"
+    },
+    "nav": {
+        "home": "Home",
+        "trackTrace": "Track & Trace",
+        "directMail": "Direct mail advertising",
+        "socialPayments": "Social payments"
+    },
+    "home": {
+        "title": "Postal services for people and businesses",
+        "subtitle": "Track deliveries, promote your business and access payment services through the national postal network.",
+        "cards": {
+            "track": {
+                "title": "Track & Trace",
+                "text": "Check the status of postal and courier deliveries."
+            },
+            "direct": {
+                "title": "Direct mail advertising",
+                "text": "Send promotional materials directly to customers."
+            },
+            "social": {
+                "title": "Social payments",
+                "text": "Information about receiving pensions, allowances and other social payments."
+            }
+        }
+    },
+    "track": {
+        "title": "Track & Trace",
+        "subtitle": "Follow your shipment by entering the tracking number.",
+        "postalDelivery": "Postal delivery",
+        "courierDelivery": "Courier delivery",
+        "postalText": "Use this form to check the status of a postal item.",
+        "courierText": "Use this form to check the status of a courier shipment.",
+        "placeholder": "Enter tracking number",
+        "search": "Search"
+    },
+    "directMail": {
+        "title": "Direct mail advertising",
+        "p1": "Do you want to send letters, catalogs, brochures, and leaflets to your clients? The Direct-Mail Service offers you this opportunity!",
+        "p2": "If you choose efficient and direct communication with your recipients, send them promotional flyers and brochures.",
+        "p3": "It is an efficient advertising channel that will significantly contribute to your company’s recognition and will positively influence your sales.",
+        "p4": "All we need is the customer's address. The rest is taken care of by Poșta Moldovei!",
+        "ratesButton": "Check postal advertising rates",
+        "audience": {
+            "title": "Direct mail may be of interest to",
+            "items": [
+                "Retail chains",
+                "Private entrepreneurs",
+                "Advertising agencies",
+                "Insurance companies",
+                "Telecommunications companies",
+                "Banks, publishers, funds, catalog commerce"
+            ]
+        },
+        "benefits": {
+            "title": "Benefits",
+            "items": [
+                "Special rates and the opportunity to save",
+                "Direct delivery of products to recipients",
+                "Simplified logistics",
+                "Delivery deadline control",
+                "Minimum 1 000 items per sender"
+            ]
+        }
+    },
+    "socialPayments": {
+        "title": "Plăți sociale",
+        "p1": "Beneficiarii de plăți sociale pot să-și ridice banii în toate oficiile poștale, fără a se ține cont de viza de reședință. Procesul de achitare se efectuează lunar, începând cu data de 1, și se stopează în ultimele 3 zile lucrătoare ale lunii în curs.",
+        "p2": "Indemnizațiile și pensiile pot fi ridicate și la domiciliu. Distribuirea la domiciliu are loc doar în favoarea persoanelor în vârstă și persoanelor cu dizabilități, care, din cauza stării de sănătate, nu se pot deplasa la oficiile poștale. Acest proces se efectuează în baza unei cereri completate în prealabil.",
+        "p3": "Plățile sociale se achită personal beneficiarului, mandatarului acestuia, tutorelui sau curatorului la prezentarea actelor confirmative. Achitările către mandatar se efectuează doar în cazul prezentării documentului care-i confirmă identitatea și a procurii autentificate, conform legislației în vigoare. Se consideră nulă procura în care nu este indicată data întocmirii.",
+        "terms": {
+            "title": "Termenii de valabilitate a procurii sunt:",
+            "items": [
+                "12 luni consecutive pentru ridicarea pensiei (în baza art. 34 al Legii nr. 156-XIV din 14 octombrie 1998 privind pensiile de asigurări sociale de stat);",
+                "12 luni pentru ridicarea alocației nominale pentru merite deosebite de stat și a compensației bănești lunare în schimbul asigurării cu produse alimentare și suplimente alimentare;",
+                "până la 3 ani pentru alte plăți sociale."
+            ]
+        },
+        "phone": "Telefon pentru informații: 022 251-299, 022 251-144."
+    },
+    "footer": {
+        "companyName": "S.E. “Poșta Moldovei”",
+        "supportLabel": "Support:",
+        "phone": "tel.: +373 22 270 044",
+        "email": "informatii@posta.md",
+        "address": "134, Stefan cel Mare av., MD-2012, Chisinau, Republic of Moldova",
+        "aboutTitle": "About us",
+        "publicTitle": "Public information",
+        "supportTitle": "Support",
+        "aboutLinks": [
+            "Presentation",
+            "Performance",
+            "Management",
+            "Organigrama",
+            "Legislation",
+            "HR",
+            "Partners"
+        ],
+        "publicLinks": [
+            "Test Test",
+            "Media relations",
+            "News",
+            "Reports",
+            "Tenders",
+            "Locations",
+            "Sales",
+            "Contact us"
+        ],
+        "supportLinks": [
+            "Protection of personal data",
+            "Feedback",
+            "Claims and suggestions",
+            "Cookies",
+            "Terms & Conditions",
+            "Tariffs",
+            "Accessibility in post offices",
+            "Specialized anti-corruption hotline",
+            "Site map"
+        ]
+    }
+}
