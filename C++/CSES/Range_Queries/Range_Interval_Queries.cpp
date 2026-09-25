@@ -1,65 +1,103 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
 
 using namespace std;
 
-int n, q;
-vector<int> a;
-vector<vector<int>> seg;
+struct Fenwick{
+    int n;
+    vector<int> bit;
 
-int query(int ind, int cl, int cr, int l, int r, int a, int b){
-    if(cr < l || cl > r)
-        return 0;
-
-    if(l <= cl && cr <= r){
-        auto lo = lower_bound(seg[ind].begin(), seg[ind].end(), a);
-        auto hi = upper_bound(seg[ind].begin(), seg[ind].end(), b);
-        return (int)(hi - lo);
+    Fenwick(int size){
+        n = size;
+        bit.assign(n + 1, 0);
     }
 
-    int m = cl + (cr - cl) / 2;
-    return query(2 * ind + 1, cl, m, l, r, a, b) + query(2 * ind + 2, m + 1, cr, l, r, a, b);
-}
-
-void build(int ind, int l, int r){
-    if(l == r){
-        seg[ind] = {a[l]};
-        return;
+    void add(int idx, int val){
+        idx++; 
+        while(idx <= n){
+            bit[idx] += val;
+            idx += idx & -idx;
+        }
     }
 
-    int m = l + (r - l) / 2;
-    build(2 * ind + 1, l, m);
-    build(2 * ind + 2, m + 1, r);
+    int sum(int idx){
+        idx++;
 
-    auto &L = seg[2 * ind + 1];
-    auto &R = seg[2 * ind + 2];
+        int s = 0;
+        while(idx > 0){
+            s += bit[idx];
+            idx -= idx & -idx;
+        }
 
-    seg[ind].resize(L.size() + R.size());
-    merge(L.begin(), L.end(), R.begin(), R.end(), seg[ind].begin());
-}
+        return s;
+    }
 
-int main(){
+    int rangeSum(int l, int r){
+        if(l > r)
+            return 0;
+        return sum(r) - (l == 0 ? 0 : sum(l - 1));
+    }
+};
+
+struct Event {
+    long long limit;
+    int l, r;
+    int id;
+    int sign;
+};
+
+int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
+    int n, q;
     cin >> n >> q;
-    
-    a.resize(n);
-    for(int i = 0; i < n; i++)
-        cin >> a[i];
 
-    seg.resize(4 * n);
-    build(0, 0, n - 1);
+    vector<pair<long long, int>> a;
 
-    while(q--){
-        int l, r, a, b;
-        cin >> l >> r >> a >> b;
+    for (int i = 0; i < n; i++) {
+        long long x;
+        cin >> x;
+        a.push_back({x, i}); // value, 0-indexed position
+    }
 
-        l--;
-        r--;
+    vector<Event> events;
+    vector<int> ans(q, 0);
 
-        cout << query(0, 0, n - 1, l, r, a, b) << endl;
+    for (int id = 0; id < q; id++) {
+        int l, r;
+        long long c, d;
+        cin >> l >> r >> c >> d;
+
+        // If the input is 1-indexed, uncomment these:
+        // l--;
+        // r--;
+
+        events.push_back({d, l, r, id, +1});
+        events.push_back({c - 1, l, r, id, -1});
+    }
+
+    sort(a.begin(), a.end());
+
+    sort(events.begin(), events.end(), [](const Event& x, const Event& y) {
+        return x.limit < y.limit;
+    });
+
+    Fenwick fw(n);
+
+    int ptr = 0;
+
+    for (auto &e : events) {
+        while (ptr < n && a[ptr].first <= e.limit) {
+            int pos = a[ptr].second;
+            fw.add(pos, 1);
+            ptr++;
+        }
+
+        ans[e.id] += e.sign * fw.rangeSum(e.l, e.r);
+    }
+
+    for (int x : ans) {
+        cout << x << '\n';
     }
 
     return 0;
